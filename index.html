@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#f8f9fa">
+
+    <title>CA Nitin Murarka | Learn Trading Simply</title>
+
+    <meta
+        name="description"
+        content="Join CA Nitin Murarka's free Telegram learning community and learn Entry, Target and Stop-Loss through simple chart examples."
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Manrope', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        /* =====================================
+           MAIN CONTAINER
+        ===================================== */
+
+        .container {
+            width: 100%;
+            max-width: 460px;
+            padding: 28px 16px 45px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        /* =====================================
+           TOP BADGE
+        ===================================== */
+
+        .top-bar {
+            background: #e8f5e9;
+            color: #2e7d32;
+
+            font-weight: 700;
+            font-size: 12px;
+
+            padding: 9px 18px;
+
+            border-radius: 50px;
+
+            margin-bottom: 25px;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            text-align: center;
+        }
+
+
+        .online-dot {
+            width: 8px;
+            height: 8px;
+
+            background: #2e7d32;
+
+            border-radius: 50%;
+
+            animation: blink 1.2s infinite;
+        }
+
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .3;
+            }
+
+        }
+
+
+        /* =====================================
+           PROFILE IMAGE
+        ===================================== */
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0066ff,
+                    #00c6ff
+                );
+
+            position: relative;
+
+            border: 4px solid #ffffff;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, .12);
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 8px;
+        }
+
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .verified {
+            position: absolute;
+
+            width: 28px;
+            height: 28px;
+
+            right: calc(50% - 58px);
+
+            margin-top: 92px;
+
+            background: #0066ff;
+            color: #ffffff;
+
+            border: 3px solid #f8f9fa;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            z-index: 3;
+        }
+
+
+        /* =====================================
+           PROFILE TEXT
+        ===================================== */
+
+        .name {
+            font-size: 25px;
+            font-weight: 800;
+
+            text-align: center;
+
+            margin: 15px 0 5px;
+
+            color: #1a1a2e;
+        }
+
+
+        .tagline {
+            color: #0066ff;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-align: center;
+
+            margin-bottom: 8px;
+        }
+
+
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 4px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .rating b {
+            color: #ff9800;
+
+            font-size: 16px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .rating small {
+            color: #777;
+
+            font-size: 11px;
+
+            margin-left: 4px;
+        }
+
+
+        /* =====================================
+           BLUE CTA BUTTON
+        ===================================== */
+
+        .btn {
+            width: 100%;
+            max-width: 380px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0066ff,
+                    #0052cc
+                );
+
+            color: #ffffff;
+
+            font-weight: 800;
+            font-size: 16px;
+
+            padding: 16px 18px;
+
+            border-radius: 14px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 5px 18px rgba(0, 102, 255, .28);
+
+            transition:
+                transform .15s,
+                box-shadow .15s;
+        }
+
+
+        .btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 24px rgba(0, 102, 255, .35);
+        }
+
+
+        .telegram-icon {
+            width: 22px;
+            height: 22px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .telegram-icon svg {
+            width: 21px;
+            height: 21px;
+
+            fill: currentColor;
+        }
+
+
+        .top-button {
+            margin-bottom: 0;
+        }
+
+
+        .free-text {
+            color: #777;
+
+            font-size: 11px;
+
+            margin-top: 9px;
+            margin-bottom: 23px;
+
+            text-align: center;
+        }
+
+
+        /* =====================================
+           STATS
+        ===================================== */
+
+        .stats {
+            display: flex;
+
+            gap: 9px;
+
+            width: 100%;
+            max-width: 380px;
+
+            margin-bottom: 26px;
+        }
+
+
+        .stat {
+            flex: 1;
+
+            background: #ffffff;
+
+            border-radius: 14px;
+
+            padding: 15px 6px;
+
+            text-align: center;
+
+            box-shadow:
+                0 2px 10px rgba(0, 0, 0, .06);
+
+            border: 1px solid #f0f0f0;
+        }
+
+
+        .stat-num {
+            font-size: 17px;
+
+            font-weight: 800;
+
+            color: #0066ff;
+        }
+
+
+        .stat-lbl {
+            font-size: 10px;
+
+            color: #888;
+
+            margin-top: 3px;
+        }
+
+
+        /* =====================================
+           HEADLINE
+        ===================================== */
+
+        .pitch {
+            max-width: 390px;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            text-align: center;
+
+            line-height: 1.45;
+
+            margin-bottom: 8px;
+        }
+
+
+        .pitch span {
+            color: #0066ff;
+        }
+
+
+        .sub {
+            max-width: 370px;
+
+            color: #777;
+
+            font-size: 13px;
+
+            line-height: 1.65;
+
+            text-align: center;
+
+            margin-bottom: 21px;
+        }
+
+
+        /* =====================================
+           HIGHLIGHT BADGE
+        ===================================== */
+
+        .urgency {
+            background: #fff3e0;
+
+            color: #e65100;
+
+            border-radius: 50px;
+
+            padding: 10px 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            width: 100%;
+            max-width: 380px;
+        }
+
+
+        /* =====================================
+           FEATURES
+        ===================================== */
+
+        .features {
+            width: 100%;
+            max-width: 380px;
+
+            margin-top: 24px;
+            margin-bottom: 20px;
+        }
+
+
+        .feat {
+            background: #ffffff;
+
+            border-radius: 12px;
+
+            padding: 14px 16px;
+
+            margin-bottom: 9px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            box-shadow:
+                0 2px 8px rgba(0, 0, 0, .04);
+
+            border: 1px solid #f1f1f1;
+        }
+
+
+        .feat-icon {
+            width: 36px;
+            height: 36px;
+
+            background: #e3f2fd;
+
+            border-radius: 9px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 17px;
+
+            flex-shrink: 0;
+        }
+
+
+        .feat-text {
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: #1a1a2e;
+        }
+
+
+        .feat-text small {
+            display: block;
+
+            color: #888;
+
+            font-weight: 500;
+
+            margin-top: 3px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =====================================
+           TRUST TEXT
+        ===================================== */
+
+        .trust {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 6px;
+
+            margin-bottom: 20px;
+
+            font-size: 11px;
+
+            color: #888;
+
+            text-align: center;
+        }
+
+
+        .trust b {
+            color: #2e7d32;
+        }
+
+
+        /* =====================================
+           DARK BUTTON
+        ===================================== */
+
+        .btn-dark {
+            width: 100%;
+            max-width: 380px;
+
+            display: block;
+
+            background: #1a1a2e;
+
+            color: #ffffff;
+
+            font-weight: 800;
+            font-size: 15px;
+
+            padding: 15px;
+
+            border-radius: 14px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            transition:
+                transform .15s,
+                opacity .2s;
+        }
+
+
+        .btn-dark:hover {
+            opacity: .92;
+
+            transform: translateY(-1px);
+        }
+
+
+        .free-tag {
+            color: #0066ff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            margin-top: 8px;
+            margin-bottom: 27px;
+        }
+
+
+        /* =====================================
+           DISCLAIMER
+        ===================================== */
+
+        .disc {
+            width: 100%;
+            max-width: 380px;
+
+            text-align: center;
+
+            color: #999;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #e6e6e6;
+        }
+
+
+        .agency {
+            margin-top: 13px;
+
+            color: #777;
+
+            font-size: 10px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================
+           FLOATING TELEGRAM BUTTON
+        ===================================== */
+
+        .float {
+            position: fixed;
+
+            right: 18px;
+            bottom: 18px;
+
+            width: 56px;
+            height: 56px;
+
+            border-radius: 50%;
+
+            background: #229ed9;
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                0 8px 25px rgba(34, 158, 217, .35);
+
+            z-index: 100;
+        }
+
+
+        .float svg {
+            width: 27px;
+
+            fill: currentColor;
+        }
+
+
+        /* =====================================
+           MOBILE RESPONSIVE
+        ===================================== */
+
+        @media(max-width: 480px) {
+
+            .container {
+                padding-top: 23px;
+            }
+
+
+            .top-bar {
+                margin-bottom: 22px;
+            }
+
+
+            .avatar {
+                width: 110px;
+                height: 110px;
+            }
+
+
+            .verified {
+                right: calc(50% - 53px);
+
+                margin-top: 85px;
+            }
+
+
+            .name {
+                font-size: 23px;
+            }
+
+
+            .pitch {
+                font-size: 18px;
+            }
+
+
+            .btn {
+                font-size: 15px;
+            }
+
+
+            .stat-num {
+                font-size: 15px;
+            }
+
+
+            .stat-lbl {
+                font-size: 9px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =====================================
+         COMMUNITY BADGE
+    ====================================== -->
+
+    <div class="top-bar">
+
+        <span class="online-dot"></span>
+
+        Free Telegram Learning Community
+
+    </div>
+
+
+
+    <!-- =====================================
+         PROFILE
+    ====================================== -->
+
+    <div class="avatar">
+
+        <!--
+            Put Nitin Murarka's image in the same folder
+            and rename it nitinmurarka.jpg
+        -->
+
+        <img
+            src="nitinmurarka.jpg"
+            alt="CA Nitin Murarka"
+        >
+
+    </div>
+
+
+    <div class="verified">
+        ✓
+    </div>
+
+
+
+    <h1 class="name">
+        CA Nitin Murarka
+    </h1>
+
+
+    <p class="tagline">
+        📊 Learn Trading Simply
+    </p>
+
+
+
+    <div class="rating">
+
+        <b>★★★★★</b>
+
+        <small>
+            Beginner-Friendly Learning
+        </small>
+
+    </div>
+
+
+
+    <!-- =====================================
+         TOP TELEGRAM BUTTON
+    ====================================== -->
+
+    <a
+        class="btn top-button join-link"
+        href="https://t.me/+I24VPS9cnK4xMThl"
+    >
+
+        <span class="telegram-icon">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M21.8 3.2 18.5 20c-.25 1.18-.91 1.47-1.85.92l-5-3.68-2.41 2.32c-.27.27-.49.49-1 .49l.36-5.09 9.26-8.37c.4-.36-.09-.56-.63-.2L5.78 13.6.85 12.06c-1.07-.34-1.09-1.07.22-1.58L20.35 3c.9-.33 1.68.2 1.45.2Z"
+                />
+
+            </svg>
+
+        </span>
+
+        Join Free Telegram Channel →
+
+    </a>
+
+
+    <p class="free-text">
+        100% free · No registration · Beginner friendly
+    </p>
+
+
+
+    <!-- =====================================
+         STATS
+    ====================================== -->
+
+    <div class="stats">
+
+
+        <div class="stat">
+
+            <div class="stat-num">
+                3 Point
+            </div>
+
+            <div class="stat-lbl">
+                Method
+            </div>
+
+        </div>
+
+
+
+        <div class="stat">
+
+            <div class="stat-num">
+                FREE
+            </div>
+
+            <div class="stat-lbl">
+                Community
+            </div>
+
+        </div>
+
+
+
+        <div class="stat">
+
+            <div class="stat-num">
+                Simple
+            </div>
+
+            <div class="stat-lbl">
+                Learning
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         MAIN TEXT
+    ====================================== -->
+
+    <p class="pitch">
+
+        Learn
+
+        <span>
+            Entry, Target & Stop-Loss
+        </span>
+
+        with CA Nitin Murarka.
+
+    </p>
+
+
+    <p class="sub">
+
+        Learn through simple chart examples and follow a clear,
+        repeatable framework designed to help beginners understand
+        charts and basic risk management.
+
+    </p>
+
+
+
+    <!-- =====================================
+         HIGHLIGHT
+    ====================================== -->
+
+    <div class="urgency">
+
+        🔥 Start learning with our free Telegram community
+
+    </div>
+
+
+
+    <!-- =====================================
+         MAIN TELEGRAM CTA
+    ====================================== -->
+
+    <a
+        class="btn join-link"
+        href="https://t.me/+I24VPS9cnK4xMThl"
+    >
+
+        <span class="telegram-icon">
+
+            <svg viewBox="0 0 24 24">
+
+                <path
+                    d="M21.8 3.2 18.5 20c-.25 1.18-.91 1.47-1.85.92l-5-3.68-2.41 2.32c-.27.27-.49.49-1 .49l.36-5.09 9.26-8.37c.4-.36-.09-.56-.63-.2L5.78 13.6.85 12.06c-1.07-.34-1.09-1.07.22-1.58L20.35 3c.9-.33 1.68.2 1.45.2Z"
+                />
+
+            </svg>
+
+        </span>
+
+        Join CA Nitin Murarka on Telegram →
+
+    </a>
+
+
+
+    <!-- =====================================
+         FEATURES
+    ====================================== -->
+
+    <div class="features">
+
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                📈
+            </div>
+
+
+            <div class="feat-text">
+
+                POINT 01 — Find Entry
+
+                <small>
+
+                    Learn how to identify potential entry areas
+                    through simple chart examples.
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                🎯
+            </div>
+
+
+            <div class="feat-text">
+
+                POINT 02 — Set Target
+
+                <small>
+
+                    Understand how traders identify target levels
+                    and plan exits.
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                🛡️
+            </div>
+
+
+            <div class="feat-text">
+
+                POINT 03 — Control Risk
+
+                <small>
+
+                    Learn about stop-loss levels and basic
+                    capital protection principles.
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="feat">
+
+            <div class="feat-icon">
+                🎓
+            </div>
+
+
+            <div class="feat-text">
+
+                Educational Community
+
+                <small>
+
+                    Trading content explained in a simple,
+                    beginner-friendly format.
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         TRUST
+    ====================================== -->
+
+    <div class="trust">
+
+        ✅
+
+        <b>
+            Free Community
+        </b>
+
+        • Beginner Friendly • Educational
+
+    </div>
+
+
+
+    <!-- =====================================
+         FINAL BUTTON
+    ====================================== -->
+
+    <a
+        class="btn-dark join-link"
+        href="https://t.me/+I24VPS9cnK4xMThl"
+    >
+
+        Open CA Nitin Murarka Telegram Channel →
+
+    </a>
+
+
+    <p class="free-tag">
+        ✓ Free to join
+    </p>
+
+
+
+    <!-- =====================================
+         DISCLAIMER
+    ====================================== -->
+
+    <div class="disc">
+
+        <strong>
+            Disclaimer:
+        </strong>
+
+        This website and Telegram community are for educational
+        and informational purposes only. Nothing shown here should
+        be considered investment, trading or financial advice.
+        Trading and investing involve financial risk.
+
+
+        <div class="agency">
+
+            Advertised by SRS Marketing Agency
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- ==========================================
+     FLOATING TELEGRAM BUTTON
+=========================================== -->
+
+<a
+    class="float join-link"
+    href="https://t.me/+I24VPS9cnK4xMThl"
+    aria-label="Join CA Nitin Murarka Telegram"
+>
+
+    <svg viewBox="0 0 24 24">
+
+        <path
+            d="M21.8 3.2 18.5 20c-.25 1.18-.91 1.47-1.85.92l-5-3.68-2.41 2.32c-.27.27-.49.49-1 .49l.36-5.09 9.26-8.37c.4-.36-.09-.56-.63-.2L5.78 13.6.85 12.06c-1.07-.34-1.09-1.07.22-1.58L20.35 3c.9-.33 1.68.2 1.45.2Z"
+        />
+
+    </svg>
+
+</a>
+
+
+
+
+<script>
+
+(() => {
+
+    'use strict';
+
+
+
+    /* ========================================================
+       CONFIGURATION
+    ======================================================== */
+
+    const CONFIG = Object.freeze({
+
+        pixelId:
+            '927628197087049',
+
+        telegramUrl:
+            'https://t.me/+I24VPS9cnK4xMThl',
+
+        pageViewDelayMs:
+            3000,
+
+        passiveReaderDelayMs:
+            8000,
+
+        minimumClickTimeMs:
+            1000,
+
+        trackedRedirectDelayMs:
+            700,
+
+        fastRedirectDelayMs:
+            50,
+
+        pageViewSessionKey:
+            'ca_nitin_murarka_qualified_page_view'
+
+    });
+
+
+
+    const pageOpenedAt = Date.now();
+
+
+    let pageViewTracked = false;
+
+    let subscribeTracked = false;
+
+    let navigationStarted = false;
+
+    let humanInteractionDetected = false;
+
+
+
+    /* ========================================================
+       LOAD META PIXEL
+    ======================================================== */
+
+    function loadMetaPixel() {
+
+
+        const pixelGuardKey =
+            `__caNitinMurarkaPixelInitialized_${CONFIG.pixelId}`;
+
+
+
+        !function(f, b, e, v, n, t, s) {
+
+
+            if(f.fbq)
+                return;
+
+
+            n = f.fbq = function() {
+
+
+                n.callMethod
+
+                    ? n.callMethod.apply(
+                        n,
+                        arguments
+                    )
+
+                    : n.queue.push(
+                        arguments
+                    );
+
+            };
+
+
+            if(!f._fbq)
+                f._fbq = n;
+
+
+            n.push = n;
+
+            n.loaded = true;
+
+            n.version = '2.0';
+
+            n.queue = [];
+
+
+            t = b.createElement(e);
+
+            t.async = true;
+
+            t.src = v;
+
+
+            s =
+                b.getElementsByTagName(e)[0];
+
+
+            s.parentNode.insertBefore(
+                t,
+                s
+            );
+
+
+        }(
+
+            window,
+
+            document,
+
+            'script',
+
+            'https://connect.facebook.net/en_US/fbevents.js'
+
+        );
+
+
+
+        /*
+         * Prevent duplicate Pixel initialization.
+         */
+
+        if(window[pixelGuardKey])
+            return;
+
+
+
+        let pixelAlreadyRegistered = false;
+
+
+
+        try {
+
+
+            if(
+                typeof fbq.getState ===
+                'function'
+            ) {
+
+
+                const pixelState =
+                    fbq.getState();
+
+
+                pixelAlreadyRegistered =
+                    pixelState.pixels.some(
+                        (pixel) =>
+
+                            String(pixel.id) ===
+                            String(CONFIG.pixelId)
+
+                    );
+
+            }
+
+
+        }
+
+        catch(error) {
+
+
+            pixelAlreadyRegistered = false;
+
+
+        }
+
+
+
+        if(!pixelAlreadyRegistered) {
+
+
+            fbq(
+                'init',
+                CONFIG.pixelId
+            );
+
+
+        }
+
+
+
+        window[pixelGuardKey] = true;
+
+    }
+
+
+
+    /* ========================================================
+       SESSION PAGEVIEW CHECK
+    ======================================================== */
+
+    function sessionPageViewExists() {
+
+
+        try {
+
+
+            return (
+                sessionStorage.getItem(
+                    CONFIG.pageViewSessionKey
+                ) === 'true'
+            );
+
+
+        }
+
+        catch(error) {
+
+
+            return false;
+
+
+        }
+
+    }
+
+
+
+    function saveSessionPageView() {
+
+
+        try {
+
+
+            sessionStorage.setItem(
+
+                CONFIG.pageViewSessionKey,
+
+                'true'
+
+            );
+
+
+        }
+
+        catch(error) {
+
+
+            /*
+             * Ignore browsers where sessionStorage
+             * is unavailable.
+             */
+
+
+        }
+
+    }
+
+
+
+    /* ========================================================
+       BASIC AUTOMATION CHECK
+    ======================================================== */
+
+    function automationDetected() {
+
+
+        return (
+            navigator.webdriver === true
+        );
+
+
+    }
+
+
+
+    /* ========================================================
+       QUALIFIED PAGEVIEW
+    ======================================================== */
+
+    function tryQualifiedPageView() {
+
+
+        const timeOnPageMs =
+            Date.now() - pageOpenedAt;
+
+
+
+        /*
+         * Qualification #1:
+         *
+         * Visitor interacted with page
+         * and stayed at least 3 seconds.
+         */
+
+        const interactionQualified =
+
+            humanInteractionDetected &&
+
+            timeOnPageMs >=
+                CONFIG.pageViewDelayMs;
+
+
+
+        /*
+         * Qualification #2:
+         *
+         * Visitor stayed focused on page
+         * for at least 8 seconds.
+         */
+
+        const passiveReaderQualified =
+
+            timeOnPageMs >=
+                CONFIG.passiveReaderDelayMs;
+
+
+
+        const canTrack =
+
+            !pageViewTracked &&
+
+            !sessionPageViewExists() &&
+
+            !automationDetected() &&
+
+            (
+                interactionQualified ||
+                passiveReaderQualified
+            ) &&
+
+            document.visibilityState ===
+                'visible' &&
+
+            document.hasFocus() &&
+
+            typeof window.fbq ===
+                'function';
+
+
+
+        if(!canTrack)
+            return;
+
+
+
+        /*
+         * Send qualified PageView
+         */
+
+        fbq(
+
+            'track',
+
+            'PageView',
+
+            {
+
+                qualified_view:
+                    true,
+
+                human_interaction:
+                    humanInteractionDetected,
+
+                qualification:
+
+                    interactionQualified
+
+                        ? 'interaction_3_seconds'
+
+                        : 'focused_8_seconds',
+
+                time_on_page:
+
+                    Math.round(
+                        timeOnPageMs / 1000
+                    )
+
+            }
+
+        );
+
+
+
+        pageViewTracked = true;
+
+
+        saveSessionPageView();
+
+    }
+
+
+
+    /* ========================================================
+       HUMAN INTERACTION
+    ======================================================== */
+
+    function recordHumanInteraction(event) {
+
+
+        /*
+         * isTrusted helps distinguish browser-generated
+         * user interaction from manually dispatched
+         * JavaScript events.
+         */
+
+        if(
+            !event.isTrusted ||
+            humanInteractionDetected
+        ) {
+
+
+            return;
+
+
+        }
+
+
+
+        humanInteractionDetected = true;
+
+
+
+        tryQualifiedPageView();
+
+    }
+
+
+
+    function initializeVisitorQualification() {
+
+
+        const interactionEvents = [
+
+            'pointerdown',
+
+            'touchstart',
+
+            'keydown',
+
+            'scroll',
+
+            'mousemove'
+
+        ];
+
+
+
+        interactionEvents.forEach(
+            (eventName) => {
+
+
+                window.addEventListener(
+
+                    eventName,
+
+                    recordHumanInteraction,
+
+                    {
+
+                        passive: true,
+
+                        once: true
+
+                    }
+
+                );
+
+
+            }
+        );
+
+
+
+        /*
+         * First qualification check
+         */
+
+        window.setTimeout(
+
+            tryQualifiedPageView,
+
+            CONFIG.pageViewDelayMs
+
+        );
+
+
+
+        /*
+         * Passive reader qualification check
+         */
+
+        window.setTimeout(
+
+            tryQualifiedPageView,
+
+            CONFIG.passiveReaderDelayMs
+
+        );
+
+    }
+
+
+
+    /* ========================================================
+       TELEGRAM CTA + SUBSCRIBE EVENT
+    ======================================================== */
+
+    function handleTelegramClick(event) {
+
+
+        event.preventDefault();
+
+
+
+        /*
+         * Prevent multiple clicks from firing
+         * multiple redirects/events.
+         */
+
+        if(navigationStarted)
+            return;
+
+
+
+        navigationStarted = true;
+
+
+
+        const timeOnPageMs =
+            Date.now() - pageOpenedAt;
+
+
+
+        /*
+         * CTA qualifies when:
+         *
+         * - real browser click
+         * - webdriver not detected
+         * - visitor has spent at least 1 second
+         */
+
+        const isQualifiedClick =
+
+            event.isTrusted &&
+
+            !automationDetected() &&
+
+            timeOnPageMs >=
+                CONFIG.minimumClickTimeMs;
+
+
+
+        /*
+         * Fire Subscribe only once.
+         */
+
+        if(
+
+            isQualifiedClick &&
+
+            !subscribeTracked &&
+
+            typeof window.fbq ===
+                'function'
+
+        ) {
+
+
+            fbq(
+
+                'track',
+
+                'Subscribe',
+
+                {
+
+                    value:
+                        0,
+
+                    currency:
+                        'INR',
+
+                    destination:
+                        'Telegram',
+
+                    source:
+                        'CA Nitin Murarka Landing Page',
+
+                    time_on_page:
+
+                        Math.round(
+                            timeOnPageMs / 1000
+                        )
+
+                }
+
+            );
+
+
+
+            subscribeTracked = true;
+
+        }
+
+
+
+        /*
+         * Give Meta Pixel a short window
+         * to send the event before redirect.
+         */
+
+        const redirectDelay =
+
+            isQualifiedClick
+
+                ? CONFIG.trackedRedirectDelayMs
+
+                : CONFIG.fastRedirectDelayMs;
+
+
+
+        window.setTimeout(
+
+            () => {
+
+
+                window.location.assign(
+                    CONFIG.telegramUrl
+                );
+
+
+            },
+
+            redirectDelay
+
+        );
+
+    }
+
+
+
+    /* ========================================================
+       CONNECT ALL TELEGRAM BUTTONS
+    ======================================================== */
+
+    function initializeTelegramButtons() {
+
+
+        const buttons =
+            document.querySelectorAll(
+                '.join-link'
+            );
+
+
+
+        buttons.forEach(
+            (button) => {
+
+
+                /*
+                 * Force every CTA to use
+                 * the configured Telegram URL.
+                 */
+
+                button.href =
+                    CONFIG.telegramUrl;
+
+
+
+                button.addEventListener(
+
+                    'click',
+
+                    handleTelegramClick
+
+                );
+
+
+            }
+        );
+
+    }
+
+
+
+    /* ========================================================
+       START
+    ======================================================== */
+
+    loadMetaPixel();
+
+
+    initializeVisitorQualification();
+
+
+
+    if(
+        document.readyState ===
+        'loading'
+    ) {
+
+
+        document.addEventListener(
+
+            'DOMContentLoaded',
+
+            initializeTelegramButtons,
+
+            {
+                once: true
+            }
+
+        );
+
+
+    }
+
+    else {
+
+
+        initializeTelegramButtons();
+
+
+    }
+
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
